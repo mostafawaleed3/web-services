@@ -1,0 +1,54 @@
+@use '../abstracts/' as *;
+@use '../abstracts/tokens/tokens' as *;
+
+.button {
+  display: inline-block;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: 1.3125em;
+  text-align: center;
+  text-decoration: none;
+  color: $color-text-inverse;
+  background: $button-surface-default;
+  padding: 1.125em 3.625em 1.125em 3.6875em;
+  &:not([data-type]) {
+    box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1),
+      0px 64.8148px 46.8519px rgba(49, 49, 49, 0.0759259),
+      0px 38.5185px 25.4815px rgba(49, 49, 49, 0.0607407),
+      0px 20px 13px rgba(49, 49, 49, 0.05),
+      0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593),
+      0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
+  }
+
+  @include breakpoint-down(small) {
+    padding: 1.125em 2.75em;
+  }
+
+  .button:focus:hover {
+    outline: none;
+  }
+
+  &[data-type='primary'] {
+    padding: $button-padding-default;
+    background: none;
+    color: $button-text-default;
+    border: 1px solid $button-border-color;
+  }
+
+  &[data-type='secondary'] {
+    background: none;
+    color: $color-text-inverse;
+    padding: 1.375em 2.75em;
+    border: 1px solid $color-surface-default;
+  }
+
+  &[data-type='slider'] {
+    margin-right: var(--space-2);
+    padding: 0.5625em 0.6875em 0.5em 0.625em;
+    color: $button-text-default;
+    border: 1px solid $button-border-color;
+    width: fit-content;
+    border-radius: $border-radius-2;
+    cursor: pointer;
+  }
+}

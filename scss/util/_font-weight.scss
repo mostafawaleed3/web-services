@@ -1,0 +1,26 @@
+@use '../abstracts/tokens/tokens' as *;
+
+
+.fw-base {
+  font-weight: $font-weight-body;
+}
+
+.fw-thin {
+  font-weight: $font-weight-thin;
+}
+
+.fw-regular {
+  font-weight: $font-weight-regular;
+}
+
+.fw-medium {
+  font-weight: $font-weight-medium;
+}
+
+.fw-semiBold {
+  font-weight: $font-weight-semiBold;
+}
+
+.fw-bold {
+  font-weight: $font-weight-bold;
+}

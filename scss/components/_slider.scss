@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+@use '../abstracts/tokens/tokens' as *;
+
+.client {
+  .box {
+    display: none;
+    min-height: rem(472);
+    @include breakpoint-down(medium) {
+      flex-direction: column;
+    }
+
+    &[data-visible='true'] {
+      display: inline-flex;
+    }
+
+    &__img {
+      > * {
+        @include breakpoint(large) {
+          border-radius: 50% 0 0 0;
+        }
+      }
+    }
+
+    &__body {
+      border-radius: 0 0 50% 0;
+      align-content: center;
+      max-width: rem(668);
+      height: 100%;
+
+      @include breakpoint-down(medium) {
+        border-radius: 0;
+        padding: var(--space-3);
+        max-width: rem(482);
+      }
+    }
+
+    p:nth-of-type(2) {
+      line-height: 1.1875em;
+    }
+  }
+
+  button {
+    background: none;
+  }
+}

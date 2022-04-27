@@ -1,0 +1,44 @@
+@use '../abstracts/tokens/tokens' as *;
+
+body {
+  background-color: $color-page-background;
+}
+
+main {
+  flex: auto;
+  > * {
+    --flow-space: var(--space-8);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+:focus {
+  outline: 1px solid $color-outline-global;
+  outline-offset: 0.2rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  &:hover:not([class]) {
+    text-underline-offset: 2px;
+    text-decoration-color: $color-underline-global;
+    text-decoration: underline;
+  }
+}
+
+[tabindex='-1'] {
+  outline: none;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  padding: 0;
+}
+
+[role='button'] {
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/base/type-scale' as *;
+
+@each $screen-size, $property in $type-scale {
+  @each $prop, $value in $property {
+    .fs-#{$prop} {
+      font-size: var(--fs-#{$prop});
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}

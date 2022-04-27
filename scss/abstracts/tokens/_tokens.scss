@@ -1,0 +1,78 @@
+@use '../base/colors' as *;
+@use '../base/type-scale' as *;
+@use '../base/type-weight' as *;
+@use '../function' as *;
+
+// color tokens
+$accent-300: var(--clr-accent-300);
+$primary-400: var(--clr-primary-400);
+$neutral-100: var(--clr-neutral-100);
+$neutral-200: var(--clr-neutral-200);
+$neutral-300: var(--clr-neutral-300);
+$neutral-800: var(--clr-neutral-800);
+$neutral-900: var(--clr-neutral-900);
+
+// // type tokens
+$font-family-sans: 'Poppins', sans-serif;
+
+$font-weight-100: var(--fw-thin);
+$font-weight-400: var(--fw-regular);
+$font-weight-500: var(--fw-medium);
+$font-weight-600: var(--fw-semiBold);
+$font-weight-700: var(--fw-bold);
+
+$font-size-100: var(--fs-100);
+$font-size-200: var(--fs-200);
+$font-size-300: var(--fs-300);
+$font-size-400: var(--fs-400);
+$font-size-500: var(--fs-500);
+$font-size-600: var(--fs-600);
+$font-size-700: var(--fs-700);
+$font-size-800: var(--fs-800);
+$font-size-900: var(--fs-900);
+$font-size-lg: var(--fs-lg);
+$font-size-xl: var(--fs-xl);
+
+$color-surface-default: $neutral-100;
+$color-surface-inverse: $neutral-200;
+$color-surface-inverse-2: $neutral-900;
+$color-surface-hover: $primary-400;
+
+$color-border-default: $neutral-300;
+
+$color-underline-global: $neutral-900;
+$color-outline-global: $neutral-900;
+
+// ====================================
+// ========= contextual tokens ========
+// ====================================
+$font-family-body: $font-family-sans;
+$font-family-heading: $font-family-sans;
+
+$font-weight-body: $font-weight-500;
+$font-weight-heading: $font-weight-600;
+$font-weight-thin: $font-weight-100;
+$font-weight-regular: $font-weight-400;
+$font-weight-medium: $font-weight-500;
+$font-weight-semiBold: $font-weight-600;
+$font-weight-bold: $font-weight-700;
+
+$font-size-body: $font-size-300;
+$color-page-background: $color-surface-default;
+
+$color-text-hover: $primary-400;
+$color-text-body: $neutral-800;
+$color-text-inverse: $neutral-100;
+$color-text-heading: $primary-400;
+$color-text-accent: $accent-300;
+
+$border-radius-1: 0.625em;
+$border-radius-2: 1.875em;
+
+// button
+$button-surface-default: $primary-400;
+$button-text-default: $primary-400;
+$button-border-color: $primary-400;
+$button-font-size: $font-size-400;
+$button-font-weight: $font-weight-body;
+$button-padding-default: 1.125em 4.0625em !default;

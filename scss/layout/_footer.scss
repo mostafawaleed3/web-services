@@ -1,0 +1,42 @@
+@use '../abstracts/' as *;
+@use '../abstracts/tokens/tokens' as *;
+
+.site-foot {
+  position: relative;
+  padding: min(8vw, calc(var(--section-spacing) + var(--space-6))) 0
+    var(--space-5);
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    background: $neutral-800;
+    height: rem(1200);
+    aspect-ratio: 1 / 1;
+    inset: 0;
+    margin: auto;
+    transform: rotate(45deg);
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 5;
+  }
+
+  .headline {
+    a {
+      margin-block-start: min(5vw, calc(var(--space-7) + rem(20)));
+    }
+  }
+
+  &__links {
+    margin-block-start: calc(5.65vw + var(--space-8));
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .copyright {
+    small {
+      font-feature-settings: 'liga' off;
+    }
+  }
+}

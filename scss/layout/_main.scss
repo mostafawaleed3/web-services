@@ -1,0 +1,149 @@
+@use '../abstracts/' as *;
+@use '../abstracts/tokens/tokens' as *;
+
+main {
+  .logos {
+    overflow: hidden;
+    min-height: rem(170);
+
+    @include breakpoint-down(small) {
+      margin-top: var(--space-7);
+    }
+
+    ul {
+      --auto-grid-min-size: 12.5rem;
+      justify-items: center;
+
+      > li {
+        width: fit-content;
+      }
+    }
+  }
+
+  .services {
+    &__img {
+      > * {
+        width: fit-content;
+      }
+      @include breakpoint-down(small) {
+        gap: var(--space-2);
+      }
+
+      .img {
+        position: relative;
+        background-color: rgba(black, 0.5);
+        overflow: hidden;
+
+        img {
+          position: relative;
+          z-index: -1;
+        }
+      }
+
+      .part__left {
+        @include breakpoint-down(small) {
+          row-gap: var(--space-3);
+        }
+
+        .one {
+          border-top-left-radius: 50%;
+        }
+
+        .two {
+          border-bottom-left-radius: 50%;
+        }
+      }
+
+      .part__right {
+        @include breakpoint-down(small) {
+          row-gap: var(--space-3);
+        }
+
+        .three {
+          border-top-right-radius: 50%;
+        }
+
+        .four {
+          border-bottom-right-radius: 50%;
+        }
+      }
+    }
+
+    &__body {
+      @include position(absolute, $top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+
+      ul {
+        margin: 0;
+      }
+    }
+  }
+
+  .client {
+    @include pseudo($left: unset, $right: -63%, $top: 8%, $z-index: -1) {
+      width: rem(656.52);
+      height: rem(569.28);
+      border: 1px solid $primary-400;
+      transform: rotate(64.77deg);
+    }
+  }
+
+  .plan {
+    @include pseudo($right: unset, $left: -30%, $top: 40%, $z-index: -1) {
+      width: rem(523.67);
+      height: rem(650.83);
+      background: $color-surface-default;
+      transform: rotate(64.77deg);
+    }
+  }
+
+  .faqs {
+    .box {
+      max-width: rem(706);
+      box-shadow: 0 20px 95px rgba(201, 203, 204, 0.3);
+      border-radius: $border-radius-1;
+      cursor: pointer;
+
+      &__question {
+        border-radius: $border-radius-1;
+        @include breakpoint-down(medium) {
+          padding: var(--space-3);
+        }
+
+        span {
+          transition: 0.5s;
+          transform: rotate(-180deg);
+          @include breakpoint-down(medium) {
+            margin-inline-end: var(--space-3);
+          }
+        }
+      }
+
+      &__answer {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 0 0 $border-radius-1 $border-radius-1;
+
+        p {
+          padding-inline: clamp(3rem, 6vw, 7.25rem);
+        }
+      }
+
+      &.active {
+        .box__question {
+          border-radius: $border-radius-1 $border-radius-1 0 0;
+        }
+
+        .box__answer {
+          height: 100%;
+        }
+
+        span {
+          color: $color-text-hover;
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+}

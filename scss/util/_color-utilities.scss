@@ -1,0 +1,25 @@
+@use '../abstracts/tokens/tokens' as *;
+
+.text-default {
+  color: $color-text-body;
+}
+
+.text-inverse {
+  color: $color-text-inverse;
+}
+
+.text-accent {
+  color: $color-text-accent;
+}
+
+.bg-default {
+  background-color: $color-page-background;
+}
+
+.bg-inverse {
+  background-color: $color-surface-inverse;
+}
+
+.bg-inverse-2 {
+  background-color: $color-surface-inverse-2;
+}

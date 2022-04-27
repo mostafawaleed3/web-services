@@ -1,0 +1,72 @@
+@use '../abstracts/' as *;
+
+.main {
+  svg {
+    position: absolute;
+    z-index: -1;
+  }
+  svg:first-of-type {
+    left: -94px;
+    top: 0;
+  }
+
+  svg:nth-of-type(2) {
+    left: 0px;
+    top: 44%;
+  }
+
+  svg:nth-of-type(3) {
+    left: 31px;
+    top: 841px;
+  }
+
+  svg:nth-of-type(4) {
+    left: 547px;
+    top: 214px;
+  }
+
+  svg:nth-of-type(5) {
+    left: 654px;
+    top: 467px;
+  }
+
+  svg:nth-of-type(6) {
+    left: 683px;
+    top: 692px;
+  }
+
+  svg:nth-of-type(7) {
+    right: 0;
+    top: -17px;
+  }
+
+  .hero {
+    justify-content: space-between;
+    @include breakpoint-down(medium) {
+      justify-content: center;
+    }
+
+    > * {
+      @include breakpoint-down(medium) {
+        text-align: center;
+      }
+    }
+
+    p {
+      max-width: 50ch;
+    }
+
+    &__img {
+      position: relative;
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+
+      svg {
+        @include position(absolute, $left: -202px, $top: 70px, $z-index: -1);
+        width: rem(668);
+        height: 100%;
+      }
+    }
+  }
+}

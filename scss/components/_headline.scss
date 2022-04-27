@@ -1,0 +1,9 @@
+.headline {
+  --flow-space: var(--space-6);
+  text-align: center;
+
+  p {
+    max-width: 65ch;
+    margin-inline: auto;
+  }
+}
