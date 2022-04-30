@@ -1,3 +1,13 @@
+.auto-grid > * {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auto-grid > * + * {
+  margin-top: 1rem;
+}
+
 @supports (display: grid) {
   .auto-grid {
     display: grid;
